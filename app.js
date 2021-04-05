@@ -1,5 +1,3 @@
-// var readlineSync = require("readline-sync");
-
 var url = "https://v6.exchangerate-api.com/v6/8bd5a86627129321d9e69b79/latest/";
 
 var baseInput = document.querySelector("#base-currency");
@@ -30,6 +28,10 @@ function changeHandler() {
     });
 }
 
+function inputHandler() {
+  convertValue.innerText = baseValue.value;
+}
+
 baseInput.addEventListener("change", con);
 
-btn.addEventListener("click", changeHandler);
+baseValue.addEventListener("input", changeHandler);
