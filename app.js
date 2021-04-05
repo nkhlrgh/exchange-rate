@@ -6,6 +6,10 @@ var baseInput = document.querySelector("#base-currency");
 
 var convertInput = document.querySelector("#convert-currency");
 
+var baseValue = document.querySelector("#base-value");
+
+var convertValue = document.querySelector("#convert-value");
+
 function constructUrl(inp) {
   return url + inp;
 }
@@ -17,13 +21,15 @@ function con() {
 function changeHandler() {
   var baseCurrency = con();
   var final = convertInput.value;
+  var value1 = baseValue.value;
   fetch(constructUrl(baseCurrency))
     .then((response) => response.json())
     .then((json) => {
-      console.log(json.conversion_rates[final]);
+      var converted = json.conversion_rates[final];
+      convertValue.innerText = value1 * converted;
     });
 }
 
 baseInput.addEventListener("change", con);
 
-convertInput.addEventListener("change", changeHandler);
+btn.addEventListener("click", changeHandler);
