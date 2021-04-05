@@ -9,27 +9,26 @@
   <body>
     <h1>Exchange Rate App</h1>
     <section>
-      <select name="baseCurrency" id="base-currency">
-        <option value="">Select currency</option>
-        <option value="INR">INR</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="AED">AED</option>
-      </select>
-      <textarea name="baseValue" id="base-value" cols="12" rows="1"></textarea>
-      <select name="convertCurrency" id="convert-currency">
-        <option value="">Select currency</option>
-        <option value="INR">INR</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="AED">AED</option>
-      </select>
-      <textarea
-        name="convertValue"
-        id="convert-value"
-        cols="12"
-        rows="1"
-      ></textarea>
+      <div>
+        <select name="baseCurrency" id="base-currency">
+          <option value="">Select currency</option>
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AED">AED</option>
+        </select>
+        <input type="number" name="baseValue" id="base-value" cols="12" rows="1"></input>
+      </div>
+      <div>
+        <select name="convertCurrency" id="convert-currency">
+          <option value="">Select currency</option>
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AED">AED</option>
+        </select>
+        <div name="convertValue" id="convert-value" cols="12" rows="1"></div>
+      </div>
     </section>
     <script src="/app.js"></script>
   </body>
